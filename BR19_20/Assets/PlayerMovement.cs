@@ -34,14 +34,24 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         
-        checkIfGrounded();
-        handleInput();
+        
         
     }
 
     private void FixedUpdate() 
     {
+        checkIfGrounded();
+        handleInput();
         move(dir, false, jump);
+        returnToSurface();
+    }
+
+    private void returnToSurface() 
+    {
+        if(grounded)
+        {
+            transform.position += Vector3.up * 0.01f;
+        }
     }
     private void checkIfGrounded() {
         if(hitDetection.isGrounded) {

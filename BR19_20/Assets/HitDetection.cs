@@ -22,11 +22,11 @@ public class HitDetection : MonoBehaviour
         {
             isGrounded = true;
             //Debug.Log("Player is grounded");
-            //Debug.DrawRay(playerPosition, lightPosition - playerPosition, Color.red);
+            Debug.DrawRay(playerPosition, lightPosition - playerPosition, Color.red);
         } else {
             isGrounded = false;
             //Debug.Log("Player in Air");
-            //Debug.DrawRay(playerPosition, lightPosition - playerPosition);
+            Debug.DrawRay(playerPosition, lightPosition - playerPosition);
         } 
     }
 
